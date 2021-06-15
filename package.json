@@ -1,6 +1,6 @@
 {
   "name": "covid-material-culture-museum",
-  "description": "Photographic collection of a pandemic's inventions & tools",
+  "description": "Collection of pandemic inventions, tools, and other tangible artifacts",
   "version": "0.1.0",
   "private": true,
   "scripts": {
