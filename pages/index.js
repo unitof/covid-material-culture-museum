@@ -1,4 +1,4 @@
-import { getPieceBySlug, getAllSlugs } from '../lib/api'
+import { getArtifactBySlug, getAllSlugs } from '../lib/api'
 
 export default function TableOfContents({ pieces }) {
   return (
@@ -17,7 +17,7 @@ export default function TableOfContents({ pieces }) {
 export async function getStaticProps(context) {
   const allSlugs = await getAllSlugs()
   const fields = ['title', 'slug']
-  const allPieces = allSlugs.map(pieceSlug => getPieceBySlug(pieceSlug, fields))
+  const allPieces = allSlugs.map(pieceSlug => getArtifactBySlug(pieceSlug, fields))
 
   console.log(allPieces)
 
