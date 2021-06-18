@@ -1,4 +1,4 @@
-import { getPieceBySlug, getAllSlugs } from '../../lib/api'
+import { getArtifactBySlug, getAllSlugs } from '../../lib/api'
 import mdToHtml from '../../lib/mdToHtml'
 
 export default function Piece({ piece }) {
@@ -21,7 +21,7 @@ export default function Piece({ piece }) {
 }
 
 export async function getStaticProps(context) {
-  const piece = await getPieceBySlug(context.params.slug, [
+  const piece = await getArtifactBySlug(context.params.slug, [
     'title',
     'body_md',
     'date_firstPublished',
