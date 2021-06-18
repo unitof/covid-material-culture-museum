@@ -5,21 +5,26 @@ export default function TableOfContents({ pieces }) {
     <article>
       <h1 className="site-title">The COVID Material Culture Museum</h1>
       <h2 className="site-subtitle">Pandemic is the mother of invention</h2>
-      <ul>
       {pieces.map(piece =>
-        <li>{piece.title}</li>
+        <article className="artifact">
+          <h3>{piece.title}</h3>
+          <p
+            className="desc"
+            dangerouslySetInnerHTML={{ __html: piece.body_md }}
+          />
+        </article>
       )}
-      </ul>
     </article>
   )
 }
 
 export async function getStaticProps(context) {
   const allSlugs = await getAllSlugs()
-  const fields = ['title', 'slug']
+  const fields = ['title', 'slug', 'body_md']
   const allPieces = allSlugs.map(pieceSlug => getArtifactBySlug(pieceSlug, fields))
-
-  console.log(allPieces)
+  allPieces.forEach(async piece => {
+    piece.body_html = await mdToHtml(piece.body_md || '')
+  })
 
   return {
     props: {
