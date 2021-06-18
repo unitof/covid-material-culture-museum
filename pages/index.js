@@ -1,5 +1,6 @@
 import { getArtifactBySlug, getAllSlugs } from '../lib/api'
 import mdToHtml from '../lib/mdToHtml'
+import Image from 'next/image'
 
 export default function TableOfContents({ pieces }) {
   return (
@@ -13,6 +14,7 @@ export default function TableOfContents({ pieces }) {
             className="desc"
             dangerouslySetInnerHTML={{ __html: piece.body_md }}
           />
+          <Image src={`/${piece.slug}.jpeg`} alt={`Photograph of ${piece.title}`} width={800} height={600}></Image>
         </article>
       )}
     </article>
