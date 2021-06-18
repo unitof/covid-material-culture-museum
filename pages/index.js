@@ -1,4 +1,5 @@
 import { getArtifactBySlug, getAllSlugs } from '../lib/api'
+import mdToHtml from '../lib/mdToHtml'
 
 export default function TableOfContents({ pieces }) {
   return (
