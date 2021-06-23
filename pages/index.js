@@ -8,7 +8,7 @@ export default function TableOfContents({ pieces }) {
       <h1 className="site-title">The COVID Material Culture Museum</h1>
       <h2 className="site-subtitle">Pandemic is the mother of invention</h2>
       {pieces.map(piece =>
-        <article className="artifact">
+        <article className="artifact" key={piece.slug}>
           <h3>{piece.title}</h3>
           <p
             className="desc"
