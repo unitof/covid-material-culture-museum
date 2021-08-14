@@ -12,7 +12,7 @@ export default function TableOfContents({ pieces }) {
           <h3>{piece.title}</h3>
           <p
             className="desc"
-            dangerouslySetInnerHTML={{ __html: piece.body_md }}
+            dangerouslySetInnerHTML={{ __html: piece.body_html }}
           />
           <Image src={`/artifactImgs/${piece.slug}.jpeg`} alt={`Photograph of ${piece.title}`} width={800} height={600}></Image>
         </article>
