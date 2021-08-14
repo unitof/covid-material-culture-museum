@@ -14,7 +14,7 @@ export default function TableOfContents({ pieces }) {
             className="desc"
             dangerouslySetInnerHTML={{ __html: piece.body_md }}
           />
-          <Image src={`/${piece.slug}.jpeg`} alt={`Photograph of ${piece.title}`} width={800} height={600}></Image>
+          <Image src={`/artifactImgs/${piece.slug}.jpeg`} alt={`Photograph of ${piece.title}`} width={800} height={600}></Image>
         </article>
       )}
     </article>
@@ -25,9 +25,9 @@ export async function getStaticProps(context) {
   const allSlugs = await getAllSlugs()
   const fields = ['title', 'slug', 'body_md']
   const allPieces = allSlugs.map(pieceSlug => getArtifactBySlug(pieceSlug, fields))
-  allPieces.forEach(async piece => {
+  for (const piece of allPieces) {
     piece.body_html = await mdToHtml(piece.body_md || '')
-  })
+  }
 
   return {
     props: {
