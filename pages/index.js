@@ -5,6 +5,7 @@ import Image from 'next/image'
 export default function TableOfContents({ pieces }) {
   return (
     <article>
+      <img className="site-title logo" src="/cmcm_logo.svg" layout="fill" alt="COVID-19 Material Culture Museum" />
       <h1 className="site-title">The COVID Material Culture Museum</h1>
       <h2 className="site-subtitle">Pandemic is the mother of invention</h2>
       {pieces.map(piece =>
