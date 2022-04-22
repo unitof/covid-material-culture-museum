@@ -1,0 +1,29 @@
+body {
+  max-width: 600px;
+  margin: 100px auto;
+
+  font-family: 'Fern Text';
+  font-variant-numeric: lining-nums;
+}
+
+.metadata {
+  text-transform: uppercase;
+  font-size: 0.7em;
+}
+
+@font-face {
+  src: url('type/FernVariable-Roman-VF.woff2') format("woff2"),
+       url('type/FernVariable-Roman-VF.woff') format("woff");
+  font-family: 'Fern Text';
+  font-style: normal;
+  font-weight: 400 800;
+}
+
+
+@font-face {
+  src: url('type/FernVariable-Italic-VF.woff2') format("woff2"),
+       url('type/FernVariable-Italic-VF.woff') format("woff");
+  font-family: 'Fern Text';
+  font-style: italic;
+  font-weight: 400 800;
+}

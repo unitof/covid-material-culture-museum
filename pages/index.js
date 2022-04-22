@@ -8,6 +8,7 @@ export default function TableOfContents({ pieces }) {
     <article>
       <Head>
         <script src={process.env['NEXT_PUBLIC_FATHOM_SCRIPTURL']} data-site={process.env['NEXT_PUBLIC_FATHOM_SITEID']} defer></script>
+        <link rel="stylesheet" href="/styles.css"/>
       </Head>
       <img className="site-title logo" src="/cmcm_logo.svg" layout="fill" alt="COVID-19 Material Culture Museum" />
       <h1 className="site-title">The COVID Material Culture Museum</h1>
