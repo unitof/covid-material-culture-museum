@@ -1,5 +1,6 @@
 import { getArtifactBySlug, getAllSlugs } from '../lib/api'
 import mdToHtml from '../lib/mdToHtml'
+import { MDXRemote as Markdown } from 'next-mdx-remote'
 import Image from 'next/image'
 import Head from 'next/head'
 
@@ -15,10 +16,7 @@ export default function TableOfContents({ pieces }) {
         <article className="artifact" key={piece.slug}>
           <h3>{piece.title}</h3>
           <Image src={`/artifactImgs/${piece.slug}.jpeg`} alt={`Photograph of ${piece.title}`} width={800} height={600}></Image>
-          <p
-            className="artifact-description"
-            dangerouslySetInnerHTML={{ __html: piece.body_html }}
-          />
+          <Markdown {...piece.body_parsedMarkdown} />
           <div className="metadata">
             { piece.provenance && <p className="provenance">{piece.provenance}</p> }
           </div>
@@ -33,7 +31,7 @@ export async function getStaticProps(context) {
   const fields = ['title', 'slug', 'body_md', 'provenance']
   const allPieces = allSlugs.map(pieceSlug => getArtifactBySlug(pieceSlug, fields))
   for (const piece of allPieces) {
-    piece.body_html = await mdToHtml(piece.body_md || '')
+    piece.body_parsedMarkdown = await mdToHtml(piece.body_md || '')
   }
 
   return {
