@@ -1,10 +1,14 @@
 import { getArtifactBySlug, getAllSlugs } from '../lib/api'
 import mdToHtml from '../lib/mdToHtml'
 import Image from 'next/image'
+import Head from 'next/head'
 
 export default function TableOfContents({ pieces }) {
   return (
     <article>
+      <Head>
+        <script src="https://cdn.usefathom.com/script.js" data-site="ATNOCSIG" defer></script>
+      </Head>
       <img className="site-title logo" src="/cmcm_logo.svg" layout="fill" alt="COVID-19 Material Culture Museum" />
       <h1 className="site-title">The COVID Material Culture Museum</h1>
       <h2 className="site-subtitle">Pandemic is the mother of invention</h2>
