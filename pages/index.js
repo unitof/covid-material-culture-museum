@@ -14,11 +14,11 @@ export default function TableOfContents({ pieces }) {
       {pieces.map(piece =>
         <article className="artifact" key={piece.slug}>
           <h3>{piece.title}</h3>
+          <Image src={`/artifactImgs/${piece.slug}.jpeg`} alt={`Photograph of ${piece.title}`} width={800} height={600}></Image>
           <p
-            className="desc"
+            className="artifact-description"
             dangerouslySetInnerHTML={{ __html: piece.body_html }}
           />
-          <Image src={`/artifactImgs/${piece.slug}.jpeg`} alt={`Photograph of ${piece.title}`} width={800} height={600}></Image>
           <div className="metadata">
             { piece.provenance && <p className="provenance">{piece.provenance}</p> }
           </div>
