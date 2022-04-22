@@ -11,8 +11,6 @@ export default function TableOfContents({ pieces }) {
         <link rel="stylesheet" href="/styles.css"/>
       </Head>
       <img className="site-title logo" src="/cmcm_logo.svg" layout="fill" alt="COVID-19 Material Culture Museum" />
-      <h1 className="site-title">The COVID Material Culture Museum</h1>
-      <h2 className="site-subtitle">Pandemic is the mother of invention</h2>
       {pieces.map(piece =>
         <article className="artifact" key={piece.slug}>
           <h3>{piece.title}</h3>
