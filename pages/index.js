@@ -13,7 +13,7 @@ export default function TableOfContents({ pieces }) {
       </Head>
       <img className="site-title logo" src="/cmcm_logo.svg" layout="fill" alt="COVID-19 Material Culture Museum" />
       {pieces.map(piece =>
-        <article className="artifact" key={piece.slug}>
+        <article className="artifact" key={piece.slug} id={piece.slug}>
           <h3>{piece.title}</h3>
           <Image src={`/artifactImgs/${piece.slug}.jpeg`} alt={`Photograph of ${piece.title}`} width={800} height={600}></Image>
           <Markdown {...piece.body_parsedMarkdown} />
