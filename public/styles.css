@@ -1,5 +1,5 @@
 body {
-  max-width: 600px;
+  max-width: 800px;
   margin: 100px auto;
 
   font-family: 'Fern Text';
@@ -26,4 +26,9 @@ body {
   font-family: 'Fern Text';
   font-style: italic;
   font-weight: 400 800;
+}
+
+img {
+ width: 100%;
+ height: auto;
 }
