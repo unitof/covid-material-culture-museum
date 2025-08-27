@@ -15,6 +15,7 @@ export default function MyApp({ Component, pageProps }) {
         <script src="https://cdn.usefathom.com/script.js" data-site="ATNOCSIG" defer></script>
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:alt" content={ogImageAlt} />
+        <meta property="twitter:card" content="summary_large_image">
         <meta property="description" content="Artifacts from the COVID era. Curated by Jacob Ford. Research by Isabel O’Leary." />
         <title>COVID Material Culture Museum</title>
       </Head>
