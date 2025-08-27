@@ -17,6 +17,8 @@ export default function MyApp({ Component, pageProps }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:image:alt" content={ogImageAlt} />
+        <meta property="description" content="Suspension for Intergenerational Injection: a museum exhibition of artifacts, signage, packaging, gear, and tools from the COVID era. On view at the City Reliquary in Brooklyn, NYC. Curated by Jacob Ford. Research by Isabel O’Leary." />
+        <title>COVID Material Culture Museum</title>
       </Head>
       <Component {...pageProps} />
     </>
