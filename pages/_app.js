@@ -12,6 +12,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <script src="https://cdn.usefathom.com/script.js" data-site="ATNOCSIG" defer></script>
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:alt" content={ogImageAlt} />
         <meta property="description" content="Artifacts from the COVID era. Curated by Jacob Ford. Research by Isabel O’Leary." />
