@@ -1,8 +1,8 @@
 import Head from 'next/head'
 
 export default function MyApp({ Component, pageProps }) {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://www.covid.museum"
-  const ogImage = `${base}/opengraph-image.png`
+  const baseURL = process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL ? `https://${NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}` || "https://covid.museum"
+  const ogImage = `${baseURL}/opengraph-image.png`
   const ogImageAlt = "[in the style of Moderna vaccine packaging] COVID-19 Material Culture Museum / Suspension for Intergenerational Injection / Opening Wednesday, September 6 at 6:00PM / On view at: The City Reliquary Inc., Williamsburg, NY 11211"
   return (
     <>
