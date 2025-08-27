@@ -1,7 +1,12 @@
 import Head from 'next/head'
 
 export default function MyApp({ Component, pageProps }) {
-  const baseURL = process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}` : "https://covid.museum"
+  let baseURL = '';
+  if (process.env.NEXT_PUBLIC_VERCEL_ENV === 'production') {
+    baseURL = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+  } else {
+     baseURL = `https://${NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}`
+  }
   const ogImage = `${baseURL}/opengraph-image.png`
   const ogImageAlt = "[in the style of Moderna vaccine packaging] COVID-19 Material Culture Museum / Suspension for Intergenerational Injection / Opening Wednesday, September 6 at 6:00PM / On view at: The City Reliquary Inc., Williamsburg, NY 11211"
   return (
