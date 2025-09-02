@@ -15,9 +15,13 @@ export default function TableOfContents({ pieces }) {
       <div style={{textAlign: 'center'}}>
         <p>Curated by Jacob Ford</p>
         <p>Research by Isabel O’Leary</p>
-        <h2>Exhibition Opening</h2>
-        <p>Wednesday, September 3, 2025 from 6:00 to 9:00PM</p>
         <p>At the City Reliquary Museum<br/>370 Metropolitan Ave. Brooklyn, NY 11211</p>
+
+        <h2>Work and artifacts by</h2>
+
+        <h2>Opening Reception</h2>
+        <p>Wednesday, September 3, 2025 from 6:00 to 9:00PM</p>
+        <h2>Featuring John Turner, Dana Reilly, Jeffrey Crowley, and other surprises.</h2>
       </div>
     </article>
   )
